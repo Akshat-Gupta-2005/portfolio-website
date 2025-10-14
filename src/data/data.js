@@ -375,4 +375,4 @@ export const certificates = [
     link: "https://drive.google.com/file/d/1F0wYszl8cl1jRov60xSA4v5EYTme0twB/view?usp=sharing",
     color: "from-green-500 to-emerald-500"
   },
-];
+]; 
