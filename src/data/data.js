@@ -4,7 +4,7 @@ import { Code, Database, Terminal, Cpu, GitBranch, Palette, Mic, Users, Brain, L
 import { Sparkles, Wrench } from "lucide-react";
 import { Github, Linkedin, Mail, Twitter, Send } from "lucide-react";
 
-export const navItems = ["About", "Projects", "Education and Experience", "Certificates", "Contact"];
+export const navItems = ["About", "Projects", "Coding Activity", "Education and Experience", "Certificates", "Contact"];
 
 export const techStack = [
   // Programming Languages
