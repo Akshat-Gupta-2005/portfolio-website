@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isDark, setIsDark] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +16,28 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const sectionIds = navItems.map(item => item.toLowerCase());
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const toggleTheme = () => {
@@ -70,10 +93,21 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
                 onClick={() => scrollToSection(item)}
-                className="text-foreground hover:text-primary transition-colors relative group"
+                className={`relative px-3 py-1.5 rounded-full transition-colors ${
+                  activeSection === item.toLowerCase()
+                    ? "text-primary-foreground"
+                    : "text-foreground hover:text-primary"
+                }`}
               >
+                {activeSection === item.toLowerCase() && (
+                  <motion.span
+                    layoutId="activeNavBubble"
+                    className="absolute inset-0 bg-gradient-primary rounded-full"
+                    style={{ zIndex: -1 }}
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
                 {item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
               </motion.button>
             ))}
             <Button
@@ -122,7 +156,11 @@ const Navbar = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="text-left py-2 text-foreground hover:text-primary transition-colors"
+                  className={`text-left py-2 px-3 rounded-lg transition-all ${
+                    activeSection === item.toLowerCase()
+                      ? "bg-gradient-primary text-primary-foreground font-medium"
+                      : "text-foreground hover:text-primary"
+                  }`}
                 >
                   {item}
                 </button>
