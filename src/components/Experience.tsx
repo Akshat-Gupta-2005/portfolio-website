@@ -3,8 +3,8 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase, GraduationCap, Trophy } from "lucide-react";
-import { education, workExperience, hackathons } from "@/data/data";
+import { Briefcase, GraduationCap, Trophy, Sparkles } from "lucide-react";
+import { education, workExperience, hackathons, extraCurricular } from "@/data/data";
 
 const Experience = () => {
   const ref = useRef(null);
@@ -139,6 +139,40 @@ const Experience = () => {
                   <p className="text-sm text-muted-foreground mb-2">{hack.project}</p>
                   <Badge className="bg-gradient-primary">{hack.position}</Badge>
                   <p className="text-xs text-muted-foreground mt-2">{hack.year}</p>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Extracurricular Activities */}
+        <div className="mt-16">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="flex items-center gap-3 mb-6"
+          >
+            <Sparkles className="h-8 w-8 text-primary" />
+            <h3 className="text-2xl font-semibold">Extracurricular Activities</h3>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            {extraCurricular.map((extra, index) => (
+              <motion.div
+                key={extra.activity}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
+              >
+                <Card className="p-6 shadow-soft hover:shadow-glow transition-all hover:-translate-y-2 h-full flex flex-col justify-between">
+                  <div>
+                    <h4 className="font-semibold text-lg mb-2 text-primary">{extra.activity}</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{extra.description}</p>
+                  </div>
+                  <div className="mt-4 pt-2 border-t border-border flex justify-end">
+                    <Badge variant="outline" className="text-xs text-muted-foreground">{extra.year}</Badge>
+                  </div>
                 </Card>
               </motion.div>
             ))}

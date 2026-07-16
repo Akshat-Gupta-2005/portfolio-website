@@ -52,14 +52,17 @@ const About = () => {
             <Card className="p-6 h-full shadow-soft hover:shadow-glow transition-shadow">
               <h3 className="text-2xl font-semibold mb-4">My Story</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                I'm a passionate developer with a keen interest in building scalable and impactful applications.
-                My journey in tech started with curiosity and has evolved into a full-fledged passion for creating
-                innovative solutions.
+                I'm Akshat — a Computer Science student at VIT Vellore (9.25 CGPA), driven by the urge to
+                build things that actually work in the real world. My journey started with MERN stack web
+                development, but quickly expanded into AI/ML, NLP, and workflow automation as I realized how
+                much more impactful software becomes when it's intelligent.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I specialize in full-stack development with a focus on modern web technologies and cloud-native
-                solutions. I'm always eager to learn new technologies and contribute to meaningful projects that
-                make a difference.
+                I've interned as a Frontend Developer at Nexgen Tech Solutions building React apps with Redux,
+                and as an SAP Development SDE at ONGC, engineering enterprise applications with role-based access
+                and automated approval workflows. Beyond internships, I've built AI-powered tools — from NLP
+                sentiment analyzers to a Tally-to-Excel data connector for real accountants, and SplitRight,
+                a React Native app that uses AI to split bills from scanned receipts.
               </p>
             </Card>
           </motion.div>
@@ -74,19 +77,19 @@ const About = () => {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">▹</span>
-                  Building scalable web applications that solve real-world problems
+                  Building production-grade apps — like TallyXL for Indian SMEs and SplitRight for AI-powered expense tracking
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">▹</span>
-                  Exploring machine learning and AI integration in web apps
+                  Designing intelligent automation pipelines with n8n, LangChain, and LLM-powered agents
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">▹</span>
-                  Contributing to open-source projects and the developer community
+                  Deepening machine learning foundations in NLP, anomaly detection, and computer vision
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">▹</span>
-                  Continuous learning and staying updated with latest tech trends
+                  Contributing to open-source and mentoring peers — recognized for mentoring at ONGC
                 </li>
               </ul>
             </Card>

@@ -80,6 +80,7 @@ export const categories = [
   "Web Apps",
   "Machine Learning",
   "AI Automation",
+  "Apps",
   // "Open Source"
 ];
 
@@ -363,6 +364,40 @@ export const projects = [
     ],
     github: "#",
     demo: "#"
+  },
+  {
+    title: "TallyXL – Tally ERP → Excel Data Connector",
+    description:
+      "Built and iteratively hardened a Tally-to-Excel data connector automating ledger reporting for Indian SMEs, evolving from a Power Query prototype into a licensable product with a 7-step self-serve diagnostic tool.",
+    category: "Apps",
+    tech: [
+      "VBA",
+      "Power Query (M)",
+      "XML/TDL",
+      "Excel",
+      "FastAPI (planned)",
+      "Razorpay"
+    ],
+    github: "#",
+    demo: "#"
+  },
+  {
+    title: "SplitRight – AI-Powered Expense Tracking & Bill-Splitting",
+    description:
+      "A local-first React Native app using AI to extract line items from scanned receipts and automatically compute fair splits among groups, with a greedy debt-consolidation algorithm for minimum settlement transfers.",
+    category: "Apps",
+    tech: [
+      "React Native (Expo)",
+      "TypeScript",
+      "SQLite",
+      "Drizzle ORM",
+      "Zustand",
+      "Gemini API",
+      "n8n",
+      "Resend API"
+    ],
+    github: "#",
+    demo: "#"
   }
 ];
 
@@ -498,6 +533,7 @@ export const workExperience = [
       "Developed backend logic with Open SQL and Internal Tables, building Object-Oriented ALV Reports and automating PDF generation via Adobe Forms/Smart Forms, cutting manual reporting effort by ~40%.",
       "Built a responsive SAP Fiori/SAPUI5 application using MVC architecture and two-way data binding, deployed on SAP HANA Cloud, improving data retrieval speed by ~30%.",
       "Automated multi-level approval workflows (leave request system with conditional routing) using SAP Build Process Automation, reducing manual approval steps by ~50%.",
+      "Gathered and consolidated requirements from different departments to design and deliver a complete interactive dashboard visualizing end-to-end order data flow for Multi-Department Order Processing Pipeline.",
       "Recognized in a formal letter of appreciation from the Manager (Programming), ABAP Team, for technical dedication and mentoring newer interns."
     ]
   }

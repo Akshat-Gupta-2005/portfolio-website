@@ -54,7 +54,7 @@ const DonutChart = ({
   const hardOffset = -(easyLen + mediumLen);
 
   return (
-    <div className="relative w-36 h-36 mx-auto">
+    <div className="relative w-48 h-48 mx-auto">
       <svg viewBox="0 0 120 120" className="w-full h-full -rotate-90">
         {/* Background ring */}
         <circle
@@ -103,8 +103,8 @@ const DonutChart = ({
         />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <span className="text-2xl font-bold">{total}</span>
-        <span className="text-xs text-muted-foreground">Solved</span>
+        <span className="text-3xl font-bold">{total}</span>
+        <span className="text-sm text-muted-foreground">Solved</span>
       </div>
     </div>
   );
@@ -122,26 +122,26 @@ const StatBox = ({
   value: string | number;
   color?: string;
 }) => (
-  <div className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50">
-    <Icon className={`h-5 w-5 ${color} shrink-0`} />
+  <div className="flex items-center gap-3 p-4 rounded-xl bg-secondary/50">
+    <Icon className={`h-6 w-6 ${color} shrink-0`} />
     <div className="min-w-0">
       <p className="text-xs text-muted-foreground">{label}</p>
-      <p className="font-semibold text-sm truncate">{value}</p>
+      <p className="font-semibold truncate">{value}</p>
     </div>
   </div>
 );
 
 // Skeleton loader
 const SkeletonCard = () => (
-  <Card className="p-6 shadow-soft">
-    <div className="animate-pulse space-y-4">
-      <div className="h-6 bg-muted rounded w-1/3" />
-      <div className="grid grid-cols-2 gap-3">
+  <Card className="p-8 shadow-soft">
+    <div className="animate-pulse space-y-5">
+      <div className="h-7 bg-muted rounded w-1/3" />
+      <div className="grid grid-cols-2 gap-4">
         {[...Array(4)].map((_, i) => (
-          <div key={i} className="h-14 bg-muted rounded-lg" />
+          <div key={i} className="h-16 bg-muted rounded-xl" />
         ))}
       </div>
-      <div className="h-32 bg-muted rounded" />
+      <div className="h-40 bg-muted rounded-lg" />
     </div>
   </Card>
 );
@@ -274,7 +274,7 @@ const CodingActivity = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-10 max-w-7xl mx-auto">
           {/* GitHub Card */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -284,17 +284,17 @@ const CodingActivity = () => {
             {githubLoading ? (
               <SkeletonCard />
             ) : githubError ? (
-              <Card className="p-6 shadow-soft text-center">
+              <Card className="p-8 shadow-soft text-center">
                 <p className="text-muted-foreground">Unable to load GitHub stats</p>
               </Card>
             ) : githubStats ? (
-              <Card className="p-6 shadow-soft hover:shadow-glow transition-all h-full">
+              <Card className="p-8 shadow-soft hover:shadow-glow transition-all h-full">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-lg bg-gradient-to-br from-gray-800 to-gray-600 shadow-lg">
-                      <Github className="h-5 w-5 text-white" />
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-600 shadow-lg">
+                      <Github className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold">GitHub</h3>
+                    <h3 className="text-2xl font-semibold">GitHub</h3>
                   </div>
                   <a
                     href={`https://github.com/${GITHUB_USERNAME}`}
@@ -306,7 +306,7 @@ const CodingActivity = () => {
                   </a>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3 mb-6">
+                <div className="grid grid-cols-2 gap-4 mb-8">
                   <StatBox
                     icon={Code2}
                     label="Repositories"
@@ -336,8 +336,8 @@ const CodingActivity = () => {
                 </div>
 
                 {/* Contribution Heatmap */}
-                <div className="rounded-lg overflow-hidden bg-secondary/30 p-3">
-                  <p className="text-xs text-muted-foreground mb-2 text-center">
+                <div className="rounded-xl overflow-hidden bg-secondary/30 p-4">
+                  <p className="text-sm text-muted-foreground mb-3 text-center">
                     Contribution Activity (Last Year)
                   </p>
                   <img
@@ -360,17 +360,17 @@ const CodingActivity = () => {
             {leetcodeLoading ? (
               <SkeletonCard />
             ) : leetcodeError ? (
-              <Card className="p-6 shadow-soft text-center">
+              <Card className="p-8 shadow-soft text-center">
                 <p className="text-muted-foreground">Unable to load LeetCode stats</p>
               </Card>
             ) : leetcodeStats ? (
-              <Card className="p-6 shadow-soft hover:shadow-glow transition-all h-full">
+              <Card className="p-8 shadow-soft hover:shadow-glow transition-all h-full">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-lg bg-gradient-to-br from-amber-500 to-orange-500 shadow-lg">
-                      <Trophy className="h-5 w-5 text-white" />
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 shadow-lg">
+                      <Trophy className="h-6 w-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold">LeetCode</h3>
+                    <h3 className="text-2xl font-semibold">LeetCode</h3>
                   </div>
                   <a
                     href={`https://leetcode.com/u/${LEETCODE_USERNAME}`}
@@ -391,7 +391,7 @@ const CodingActivity = () => {
                 />
 
                 {/* Difficulty Breakdown */}
-                <div className="mt-5 space-y-3">
+                <div className="mt-6 space-y-4">
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center gap-2">
                       <span className="w-3 h-3 rounded-full bg-green-500" />

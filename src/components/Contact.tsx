@@ -164,6 +164,10 @@ const Contact = () => {
                 </p>
                 <p className="flex items-start">
                   <span className="text-primary mr-2">▹</span>
+                  <span>Phone: (+91) 7290888525</span>
+                </p>
+                <p className="flex items-start">
+                  <span className="text-primary mr-2">▹</span>
                   <span>Email: gemini.akshatgupta@gmail.com</span>
                 </p>
                 <p className="flex items-start">
