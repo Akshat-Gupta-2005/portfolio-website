@@ -2,7 +2,7 @@
 // Extracted and updated from resume content
 import { Code, Database, Terminal, Cpu, GitBranch, Palette, Mic, Users, Brain, Laptop, Workflow, Network } from "lucide-react";
 import { Sparkles, Wrench } from "lucide-react";
-import { Github, Linkedin, Mail, Twitter, Send } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Send, Trophy } from "lucide-react";
 
 export const navItems = ["About", "Projects", "Coding Activity", "Education and Experience", "Certificates", "Contact"];
 
@@ -188,7 +188,7 @@ export const projects = [
       "Bootstrap",
       "CSS"
     ],
-    github: "#",
+    github: "https://github.com/Akshat-Gupta-2005/GoRide",
     demo: "#"
   },
   {
@@ -206,7 +206,7 @@ export const projects = [
       "Tiktoken",
       "Facebook BART"
     ],
-    github: "#",
+    github: "https://github.com/Akshat-Gupta-2005/Review-Analysis-AI",
     demo: "#"
   },
   {
@@ -223,7 +223,7 @@ export const projects = [
       "Torchvision",
       "Torchaudio"
     ],
-    github: "#",
+    github: "https://github.com/Akshat-Gupta-2005/Summarise-AI",
     demo: "#"
   },
   {
@@ -240,7 +240,7 @@ export const projects = [
       "Seaborn",
       "Jupyter Notebook"
     ],
-    github: "#",
+    github: "https://github.com/Akshat-Gupta-2005/ThreatDetection",
     demo: "#"
   },
   {
@@ -258,7 +258,7 @@ export const projects = [
       "API Integration",
       "RAG"
     ],
-    github: "#",
+    github: "https://github.com/Akshat-Gupta-2005/Navora-AI",
     demo: "#"
   },
   {
@@ -378,7 +378,7 @@ export const projects = [
       "FastAPI (planned)",
       "Razorpay"
     ],
-    github: "#",
+    github: "https://github.com/Akshat-Gupta-2005/TallyXL",
     demo: "#"
   },
   {
@@ -396,7 +396,54 @@ export const projects = [
       "n8n",
       "Resend API"
     ],
-    github: "#",
+    github: "https://github.com/Akshat-Gupta-2005/SplitRight",
+    demo: "#"
+  },
+  {
+    title: "BackupSync – Two-Way Folder Synchronization Engine",
+    description:
+      "Built a dependency-free Python tool for reliable two-way folder synchronization across local drives, external disks, and network/cloud shares, using state-tracking to make delete detection and conflict resolution reliable across runs.",
+    category: "Apps",
+    tech: [
+      "Python",
+      "watchdog",
+      "JSON State Snapshots",
+      "CLI Tooling"
+    ],
+    github: "https://github.com/Akshat-Gupta-2005/BackupSync",
+    demo: "#"
+  },
+  {
+    title: "WhatsApp Bulk Messaging Automation",
+    description:
+      "Built a lightweight Python automation tool to send a single message to a list of recipients over WhatsApp Web, driven by simple CSV/text input files and a one-click launcher.",
+    category: "AI Automation",
+    tech: [
+      "Python",
+      "pywhatkit",
+      "WhatsApp Web",
+      "Batch Scripting"
+    ],
+    github: "https://github.com/Akshat-Gupta-2005/WhatsApp-Bulk-Messaging-Automation",
+    demo: "#"
+  },
+  {
+    title: "AI Automation & Workflow Suite – Intelligent Multi-Agent n8n Platform",
+    description:
+      "Built a collection of AI-powered automation workflows in n8n spanning conversational assistants, deep research, academic analytics, knowledge retrieval, graph database querying, and Google Workspace productivity automation; one workflow is in active production use by 10+ users.",
+    category: "AI Automation",
+    tech: [
+      "n8n",
+      "Google Gemini Chat Model",
+      "Ollama",
+      "Neo4j",
+      "JavaScript",
+      "Webhooks",
+      "Google Workspace APIs",
+      "AI Agents",
+      "Prompt Engineering"
+    ],
+    github: "https://github.com/Akshat-Gupta-2005/n8n-workflows",
     demo: "#"
   }
 ];
@@ -542,6 +589,7 @@ export const workExperience = [
 export const socialLinks = [
   { icon: Github, href: "https://github.com/Akshat-Gupta-2005", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/akshatgupta2005/", label: "LinkedIn" },
+  { icon: Trophy, href: "https://leetcode.com/u/Akshat-Gupta-2005", label: "LeetCode" },
   { icon: Mail, href: "mailto:gemini.akshatgupta@gmail.com", label: "Email" }
 ];
 

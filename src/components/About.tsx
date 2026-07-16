@@ -54,7 +54,7 @@ const About = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 I'm Akshat — a Computer Science student at VIT Vellore (9.25 CGPA), driven by the urge to
                 build things that actually work in the real world. My journey started with MERN stack web
-                development, but quickly expanded into AI/ML, NLP, and workflow automation as I realized how
+                development, but quickly expanded into AI/ML, data analysis, NLP, and workflow automation as I realized how
                 much more impactful software becomes when it's intelligent.
               </p>
               <p className="text-muted-foreground leading-relaxed">
