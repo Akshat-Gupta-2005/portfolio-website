@@ -80,7 +80,7 @@ export const categories = [
   "Web Apps",
   "Machine Learning",
   "AI Automation",
-  "Open Source"
+  // "Open Source"
 ];
 
 export const projects = [
@@ -254,7 +254,8 @@ export const projects = [
       "GPS",
       "Encryption",
       "Mobile App",
-      "API Integration"
+      "API Integration",
+      "RAG"
     ],
     github: "#",
     demo: "#"

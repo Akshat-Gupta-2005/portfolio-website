@@ -9,9 +9,6 @@ import { education, workExperience, hackathons } from "@/data/data";
 const Experience = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-
-
   
 
   return (
